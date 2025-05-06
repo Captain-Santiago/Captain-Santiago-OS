@@ -13,7 +13,7 @@ set -ouex pipefail
 dnf5 install -y tmux
 
 # Installing steam and discord inside a container
-flatpak install -y --noninteractive flathub steam discord
+flatpak install -y --noninteractive flathub com.valvesoftware.Steam com.discordapp.Discord
 
 # Use a COPR Example:
 #
