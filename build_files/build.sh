@@ -10,12 +10,10 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-# Installing nonfree repositories
-dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-dnf config-manager setopt fedora-cisco-openh264.enabled=1
+dnf5 install -y tmux
 
-# Installing steam
-dnf5 install -y tmux steam
+# Installing steam and discord inside a container
+flatpak install -y --noninteractive steam discord
 
 # Use a COPR Example:
 #
